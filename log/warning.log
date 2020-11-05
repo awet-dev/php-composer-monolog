@@ -1,4 +1,1 @@
-[2020-11-05T14:58:06.262812+01:00] my_logger.WARNING: warning [] []
-[2020-11-05T14:58:12.172516+01:00] my_logger.ERROR: error [] []
-[2020-11-05T14:58:18.506409+01:00] my_logger.CRITICAL: critical [] []
-[2020-11-05T14:58:24.346763+01:00] my_logger.ALERT: alert [] []
+

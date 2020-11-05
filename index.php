@@ -15,21 +15,23 @@ $button = isset($_GET['type'])? $_GET['type'] : "";
 $message = isset($_GET['message'])? $_GET['message'] : "";
 
 // Create the logger
-$logger = new Logger('my_logger');
+$logger = new Logger('My Logger');
 
 // You can now use your logger
 switch ($button){
     case 'INFO':
         $logger->pushHandler(new StreamHandler(__DIR__.'/log/info.log', Logger::INFO));
-        $logger->pushHandler(new BrowserConsoleHandler);
+        $logger->pushHandler(new BrowserConsoleHandler());
         $logger->info($message);
         break;
     case 'DEBUG':
         $logger->pushHandler(new StreamHandler(__DIR__.'/log/info.log', Logger::DEBUG));
+        $logger->pushHandler(new BrowserConsoleHandler());
         $logger->debug($message);
         break;
     case 'NOTICE':
         $logger->pushHandler(new StreamHandler(__DIR__.'/log/info.log', Logger::NOTICE));
+        $logger->pushHandler(new BrowserConsoleHandler());
         $logger->notice($message);
         break;
     case 'WARNING':
@@ -53,6 +55,5 @@ switch ($button){
         $logger->emergency($message);
         break;
 }
-
 
 require_once 'buttons.html';
